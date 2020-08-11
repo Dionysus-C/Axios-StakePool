@@ -8,6 +8,7 @@ function submitUserForm() {
         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
         return false;
     }
+    alert("email goes here");
     return true;
 }
 
@@ -41,9 +42,10 @@ function verifyCaptcha() {
 </table>
 
 <h3> Contact us via email: </h3>
-<form onsubmit="return submitUserForm();">
-    <div class="g-recaptcha" data-sitekey="6LdGt70ZAAAAANudwjVKDzVjm-VmIBucqmn8vqB2" data-callback="verifyCaptcha"></div>
+
+<form  id="recaptchaform" onsubmit="return submitUserForm();">
+    <div  class="g-recaptcha" data-sitekey="6LdGt70ZAAAAANudwjVKDzVjm-VmIBucqmn8vqB2" data-callback="verifyCaptcha"></div>
     <div id="g-recaptcha-error"></div>
-    <input type="submit" name="submit" value="Submit" />
+    <input type="submit" name="submit" value="Get email" />
 </form>
 </body>
