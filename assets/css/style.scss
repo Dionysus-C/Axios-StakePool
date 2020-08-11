@@ -1,12 +1,12 @@
 ---
 ---
 @import "{{ site.theme }}";
-ul {
+.navbarul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+.navbarli {
   display: inline;
 }
