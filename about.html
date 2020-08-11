@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+<?php
+require_once 'recaptcha/src/autoload.php';
+$recaptcha = new \ReCaptcha\ReCaptcha($secret);
+?>
+
 <ul class="navbarul">
   <li class="navbarli"><a class="unActive" href="https://dionysus-c.github.io/Axios-StakePool/index.html">Home</a></li>
   <li class="navbarli"><a class="Active" href="https://dionysus-c.github.io/Axios-StakePool/about.html">About</a></li>
