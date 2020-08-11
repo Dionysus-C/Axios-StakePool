@@ -1,7 +1,17 @@
 ---
 layout: default
 ---
+<script>
+  $("#cmdSubmit").click(function () {
+    var response = grecaptcha.getResponse();
 
+    if(response.length == 0) {
+
+    } else {
+      alert("itworked");
+    }
+  });
+</script>
 <ul class="navbarul">
   <li class="navbarli"><a class="unActive" href="https://dionysus-c.github.io/Axios-StakePool/index.html">Home</a></li>
   <li class="navbarli"><a class="Active" href="https://dionysus-c.github.io/Axios-StakePool/about.html">About</a></li>
@@ -28,7 +38,7 @@ layout: default
 </table>
 
 <h3> Contact us via email: </h3>
-<form>
+<form method="POST">
      <div class="g-recaptcha" data-sitekey="6LdGt70ZAAAAANudwjVKDzVjm-VmIBucqmn8vqB2"></div>
      <br/>
      <input id="cmdSubmit" type="submit" value="Get email">
