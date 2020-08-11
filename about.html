@@ -1,21 +1,7 @@
 ---
 layout: default
 ---
-<script>
-function submitUserForm() {
-    var response = grecaptcha.getResponse();
-    if(response.length == 0) {
-        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
-        return false;
-    }
-    alert("email goes here");
-    return true;
-}
 
-function verifyCaptcha() {
-    document.getElementById('g-recaptcha-error').innerHTML = '';
-}
-</script>
 <ul class="navbarul">
   <li class="navbarli"><a class="unActive" href="https://dionysus-c.github.io/Axios-StakePool/index.html">Home</a></li>
   <li class="navbarli"><a class="Active" href="https://dionysus-c.github.io/Axios-StakePool/about.html">About</a></li>
