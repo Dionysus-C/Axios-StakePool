@@ -2,15 +2,18 @@
 layout: default
 ---
 <script>
-  $("#cmdSubmit").click(function () {
+function submitUserForm() {
     var response = grecaptcha.getResponse();
-
     if(response.length == 0) {
-      
-    } else {
-      alert("itworked");
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+        return false;
     }
-  });
+    return true;
+}
+
+function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+}
 </script>
 <ul class="navbarul">
   <li class="navbarli"><a class="unActive" href="https://dionysus-c.github.io/Axios-StakePool/index.html">Home</a></li>
@@ -38,11 +41,9 @@ layout: default
 </table>
 
 <h3> Contact us via email: </h3>
-<form>
-     <div class="g-recaptcha" data-sitekey="6LdGt70ZAAAAANudwjVKDzVjm-VmIBucqmn8vqB2"></div>
-     <br/>
-     <input id="cmdSubmit" type="submit" value="Get email">
+<form onsubmit="return submitUserForm();">
+    <div class="g-recaptcha" data-sitekey="6LdGt70ZAAAAANudwjVKDzVjm-VmIBucqmn8vqB2" data-callback="verifyCaptcha"></div>
+    <div id="g-recaptcha-error"></div>
+    <input type="submit" name="submit" value="Submit" />
 </form>
-
-
 </body>
