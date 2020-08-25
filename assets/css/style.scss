@@ -17,16 +17,20 @@
   font-size: 18px;
   padding: 5px;
 }
+
+.navbarli :hover{
+color: #a9a9a9
+}
 .mainbody{
 
 
 }
 .Active {
-  color:#66ff00;
+  color: black; 
 }
+
 .unActive {
-  opacity: 40%;
-  color: black;
+  color: #a9a9a9;
 }
 
 #recaptchaform {
