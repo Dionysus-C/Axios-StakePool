@@ -54,7 +54,9 @@
 .menu-item:hover {
     background: rgba(0, 0, 0, 0.1);
 }
-
+.main-content{
+  max-width: none !important;
+}
 .menu-item.active {
     background: #00a8ff;
     color: #ffffff;
