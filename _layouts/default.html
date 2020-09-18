@@ -15,7 +15,7 @@ new Pageable("#container", {
   delay: 0, // the delay in ms before the scroll animation starts
   throttle: 50, // the interval in ms that the resize callback is fired
   orientation: "vertical", // or horizontal
-  swipeThreshold: 10, // swipe / mouse drag distance (px) before firing the page change event
+  swipeThreshold: 8, // swipe / mouse drag distance (px) before firing the page change event
   freeScroll: false, // allow manual scrolling when dragging instead of automatically moving to next page
   navPrevEl: false, // define an element to use to scroll to the previous page (CSS3 selector string or Element reference)
   navNextEl: false, // define an element to use to scroll to the next page (CSS3 selector string or Element reference)
@@ -79,8 +79,8 @@ new Pageable("#container", {
 <div id="container">
     <div data-anchor="Page 1">
     <image src="assets/header.jpeg" style="width:100%;"></image>
-   </div>
     <main id="content" class="main-content" role="main">
+       </div>
       {{ content }}
 
       <footer class="site-footer">
