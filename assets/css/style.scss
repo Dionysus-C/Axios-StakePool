@@ -33,3 +33,13 @@
     width: 100%;
     background: transparent;
 }
+
+@media screen and (max-width: 600px) {
+  .parallax-window {
+      min-height: 596px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background: transparent;
+  }
+}
