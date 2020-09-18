@@ -76,10 +76,22 @@ new Pageable("#container", {
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
+    <div class="anchors">
+			<ul>
+				<li><a href="#page-1" class="active">Page 1</a></li>
+				<li><a href="#page-2">Page 2</a></li>
+				<li><a href="#page-3">Page 3</a></li>
+				<li><a href="#page-4">Page 4</a></li>
+				<li><a href="#page-5">Page 5</a></li>
+				<li><a href="#page-6">Page 6</a></li>
+			</ul>
+		</div>
 <div id="container">
-    <div data-anchor="Page 1">
-    <image src="assets/header.jpeg" style="width:100%;"></image>
-   </div>
+  <section data-anchor="Page 1">
+  <image src="assets/header.jpeg" style="width:100%;"></image>
+</section>
+
+
     <main id="content" class="main-content" role="main">
       {{ content }}
 
