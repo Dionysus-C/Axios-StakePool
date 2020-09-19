@@ -23,7 +23,16 @@ background-position: center center;
   color: white;
   box-shadow: 4px 2px 13px 1px #FFD700;
 }
-
+.list-group-item{
+  background-color: rgba(128, 128, 128, 0.2);
+  color: white;
+    box-shadow: 4px 2px 13px 1px #FFD700;
+}
+.list-group{
+    background-color: rgba(128, 128, 128, 0.2);
+    color: white;
+      box-shadow: 4px 2px 13px 1px #FFD700;
+}
 body{
   background-color: black;
     position: relative;
