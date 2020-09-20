@@ -1,6 +1,18 @@
 ---
 layout: default
 ---
+<script>
+$.getJSON('https://js.adapools.org/pools/06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09/summary.json', function(data) {
+$.each( data.data, function( i, val ) {
+  a=new Array('tax_fix','pledge','total_stake');
+  if(a.includes(i))  val=Math.round(parseInt(val)/1000000);
+  if(i=='blocks_lifetime') val=parseInt(val) + parseInt(data.data.blocks_epoch);
+
+  $('#06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_'+i).html(val).text();
+});
+  });
+</script>
+
 <nav id="navbar" class="navbar navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="#">Axios StakePool</a>
   <ul class="nav nav-pills">
@@ -53,7 +65,20 @@ layout: default
 
 <div class="jumbotron" id="StakeInfo">
   <h2> Stakepool information </h2>
-<a href="https://adapools.org/pool/06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09" target="_blank"><img src="https://static.adapools.org/summary/adapools.org!ext!static.php!v=epoch_summary&pool=06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c.png" alt=""></a>
+Pool ID: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_pool_id"></span><br>
+		Ticker: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_db_ticker"></span><br>
+		Name: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_db_name"></span><br>
+		Description: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_db_description"></span><br>
+		Total Stake: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_total_stake"></span><br>
+		Last Reward Epoch: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_rewards_epoch"></span><br>
+		Tax Ratio: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_tax_ratio"></span><br>
+		Tax Fix: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_tax_fix"></span><br>
+		ROA: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_roa">%</span><br>
+		Blocks Lifetime: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_blocks_lifetime"></span><br>
+		Blocks in epoch: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_blocks_epoch"></span><br>
+		Pledge: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_pledge"></span><br>
+		Rank: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_rank"></span><br>
+		More info on <a href="https://adapools.org/pool/06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09">ADApools.org</a>.
 </div>
 
 </body>
