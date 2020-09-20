@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 $.getJSON('https://js.adapools.org/pools/06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09/summary.json', function(data) {
 $.each( data.data, function( i, val ) {
@@ -78,7 +79,5 @@ Pool ID: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_pool
 		Blocks in epoch: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_blocks_epoch"></span><br>
 		Pledge: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_pledge"></span><br>
 		Rank: <span id="06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09_rank"></span><br>
-		More info on <a href="https://adapools.org/pool/06122931cfcef487a82e900334df4ad3f214669ffc451f62d7c13f09">ADApools.org</a>.
 </div>
-
 </body>
